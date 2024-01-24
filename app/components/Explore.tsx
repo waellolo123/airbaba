@@ -1,5 +1,6 @@
 import { ExploreData } from "../types/app";
 import { getExplore } from "../utils/api";
+import MainHeading from "./MainHeading";
 import SmallCard from "./SmallCard";
 
 
@@ -9,10 +10,12 @@ const Explore = async () => {
   
   return (
     <section className="container pt-6">
-     <h2 className="text-4xl font-semibold pb-5 text-slate-500">Latest Jobs Posted</h2>
+     <MainHeading title="Latest Jobs Posted" />
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
      {exploreData.map((item)=>(
        <SmallCard  key={item.img} img={item.img} distance={item.distance} location={item.location}/>
-     ))}
+       ))}
+       </div>
     </section>
   )
 }
