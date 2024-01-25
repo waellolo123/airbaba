@@ -1,6 +1,9 @@
+"use client";
 import {SearchIcon} from "@heroicons/react/solid";
 
 const SearchBar = () => {
+ 
+
   return (
     <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm ">
       <input 
